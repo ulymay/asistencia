@@ -24,11 +24,19 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
-        $user=Auth::user();
+        $request->user()->authorizeRoles(['alumno','maestro']);
+        
+        if(Auth::user()->hasRole('maestro')){
+            return view('maestro');
+        }else{
+            return view('home');
+        }
+   
+        // $user=Auth::user();
 
 
-        return view('home', compact('user'));
+        // return view('home', compact('user'));
     }
 }
