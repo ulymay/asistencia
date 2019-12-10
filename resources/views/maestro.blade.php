@@ -15,7 +15,7 @@
                     @endif
 
                     @if(Auth::user()->hasRole('maestro'))
-                        <div>Que onda Compi</div>
+                        
                     @else
                         <div>Acceso como alumno</div>
                     @endif
