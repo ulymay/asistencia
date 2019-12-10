@@ -16,6 +16,9 @@ class CreateClasesTable extends Migration
         Schema::create('clases', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('codigo');
+            $table->integer('materia_id');
+            $table->integer('aula_id');
+            $table->string('hora');
             $table->timestamps();
         });
     }

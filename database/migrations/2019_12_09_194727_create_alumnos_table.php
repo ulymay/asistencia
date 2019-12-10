@@ -17,6 +17,8 @@ class CreateAlumnosTable extends Migration
             $table->bigIncrements('id');
             $table->string('nombre');
             $table->string('email');
+            $table->integer('semestre');
+            $table->integer('materia_id');
             $table->timestamps();
         });
     }

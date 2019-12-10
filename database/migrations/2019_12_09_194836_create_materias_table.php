@@ -17,7 +17,8 @@ class CreateMateriasTable extends Migration
             $table->bigIncrements('id');
             $table->string('nombre');
             $table->string('codigo');
-            $table->string('hora');
+            $table->integer('clase_id');
+
             $table->timestamps();
         });
     }

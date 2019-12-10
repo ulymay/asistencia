@@ -17,6 +17,7 @@ class CreateMaestrosTable extends Migration
             $table->bigIncrements('id');
             $table->string('nombre');
             $table->string('email');
+            $table->integer('clase_id');
             $table->timestamps();
         });
     }
