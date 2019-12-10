@@ -44,7 +44,6 @@ class MateriasController extends Controller
 
         $materia->nombre=$request->nombre;
         $materia->codigo=$request->codigo;
-        $materia->hora=$request->hora;
 
         $materia->save();
         $materias = Materia::all();

@@ -32,6 +32,13 @@
         </tr>
 
         <tr>
+            <td>Semestre: </td>
+            <td>
+            <input type="text" name="semestre" id="" value="{{$alumno->semestre}}">
+            </td>
+        </tr>
+
+        <tr>
             <td>
                 <input type="submit" value="Actualizar" name="enviar">
             </td>

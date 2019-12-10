@@ -14,11 +14,13 @@
                             <tr>
                                 <td>Nombre</td>
                                 <td>Email</td>
+                                <td>Semestre</td>
                             </tr>
                             @foreach($alumnos as $alumno)
                             <tr>
                                 <td><a href="{{route('alumnos.edit', $alumno->id)}}">{{$alumno->nombre}}</a></td>
                                 <td>{{$alumno->email}}</td>
+                                <td>{{$alumno->semestre}}</td>
                             </tr>
                             @endforeach
                             <br>

@@ -30,6 +30,13 @@
         </tr>
 
         <tr>
+            <td>Semestre: </td>
+            <td>
+            <input type="text" name="semestre" id="">
+            </td>
+        </tr>
+
+        <tr>
             <td>
                 <input type="submit" value="Enviar" name="enviar">
             </td>

@@ -42,6 +42,7 @@ class AlumnosController extends Controller
 
         $alumno->nombre=$request->nombre;
         $alumno->email=$request->email;
+        $alumno->semestre=$request->semestre;
 
         $alumno->save();
         $alumnos = Alumno::all();

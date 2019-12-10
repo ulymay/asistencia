@@ -20,7 +20,6 @@
                             <tr>
                                 <td><a href="{{route('materias.edit', $materia->id)}}">{{$materia->nombre}}</a></td>
                                 <td>{{$materia->codigo}}</td>
-                                <td>{{$materia->hora}}</td>
                             </tr>
                             @endforeach
                             <br>

@@ -32,13 +32,6 @@
         </tr>
         
         <tr>
-            <td>Hora: </td>
-            <td>
-            <input type="text" name="hora" id="" value="{{$materia->hora}}">
-            </td>
-        </tr>
-
-        <tr>
             <td>
                 <input type="submit" value="Actualizar" name="enviar">
             </td>
