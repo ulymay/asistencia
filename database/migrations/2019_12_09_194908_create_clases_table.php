@@ -17,6 +17,7 @@ class CreateClasesTable extends Migration
             $table->bigIncrements('id');
             $table->string('codigo');
             $table->time('hora');
+            $table->time('hmaxmaestro');
             $table->string('materia');
             $table->string('aula');
             $table->timestamps();

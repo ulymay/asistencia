@@ -14,15 +14,12 @@
                             <tr>
                                 <td>Nombre</td>
                                 <td>Email</td>
-                                <td>Clase</td>
                             </tr>
                             @foreach($maestros as $maestro)
                             
                             <tr>
-                                <td><a href="{{route('', $maestro->id)}}">{{$maestro->name}}</a></td>
+                                <td><a href="{{route('maestros.edit', $maestro->id)}}">{{$maestro->name}}</a></td>
                                 <td>{{$maestro->email}}</td>
-                                
-                                <td></td>
                             </tr>
                             @endforeach
                             <br>

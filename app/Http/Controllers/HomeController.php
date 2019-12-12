@@ -10,6 +10,8 @@ use App\Maestro;
 
 use App\Clase;
 
+use App\Asistencia;
+
 
 class HomeController extends Controller
 {
@@ -33,9 +35,14 @@ class HomeController extends Controller
         $request->user()->authorizeRoles(['alumno','maestro']);
         
         if(Auth::user()->hasRole('maestro')){
+            $carbon = new \Carbon\Carbon();
+            $date = $carbon->now();
+            $date = $date->toTimeString();
+
+
             $maestros = Maestro::all();
             $clas = Clase::all();
-            return view('maestro', compact(['maestros', 'clas']));
+            return view('maestro', compact(['maestros', 'clas', 'date']));
         }else{
             return view('home');
         }

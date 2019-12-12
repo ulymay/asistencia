@@ -4,8 +4,52 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "57b92a8937d9997a03ae6bbd802f4080",
+    "content-hash": "2f8873fbf8da0c0f03a61f36b9c26220",
     "packages": [
+        {
+            "name": "carbon-cli/carbon-cli",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kylekatarnls/carbon-cli.git",
+                "reference": "e325f21406c32a90a4b757f5e852a0298318e8b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kylekatarnls/carbon-cli/zipball/e325f21406c32a90a4b757f5e852a0298318e8b3",
+                "reference": "e325f21406c32a90a4b757f5e852a0298318e8b3",
+                "shasum": ""
+            },
+            "require": {
+                "nesbot/carbon": "^2.20",
+                "php": "^7.1 || ^8.0",
+                "simple-cli/simple-cli": "^1.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.5 || ^8.2"
+            },
+            "bin": [
+                "bin/carbon"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Carbon\\": "src/Carbon/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "kylekatarnls",
+                    "homepage": "http://github.com/kylekatarnls"
+                }
+            ],
+            "description": "CLI tool for Carbon",
+            "time": "2019-10-11T09:42:48+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "v0.1.1",
@@ -1485,6 +1529,50 @@
                 "uuid"
             ],
             "time": "2019-12-01T04:55:27+00:00"
+        },
+        {
+            "name": "simple-cli/simple-cli",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kylekatarnls/simple-cli.git",
+                "reference": "29246c6b7115f0758c3c0ef20531b5190b91d8c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kylekatarnls/simple-cli/zipball/29246c6b7115f0758c3c0ef20531b5190b91d8c3",
+                "reference": "29246c6b7115f0758c3c0ef20531b5190b91d8c3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "^2",
+                "phpstan/phpstan": "^0.11",
+                "phpunit/phpunit": "^7"
+            },
+            "bin": [
+                "bin/simple-cli"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SimpleCli\\": "src/SimpleCli/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "KyleK",
+                    "email": "kylekatarnls@gmail.com"
+                }
+            ],
+            "description": "A simple command line framework",
+            "time": "2019-09-17T13:03:19+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
