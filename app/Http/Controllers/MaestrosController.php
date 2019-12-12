@@ -15,7 +15,7 @@ class MaestrosController extends Controller
      */
     public function index()
     {
-        $maestros = Maestro::all();
+        $maestros = Maestro::all();      
 
         return view('maestros.index', compact('maestros'));
     }
@@ -40,8 +40,10 @@ class MaestrosController extends Controller
     {
         $maestro = new Maestro;
 
-        $maestro->nombre=$request->nombre;
+        $maestro->name=$request->name;
         $maestro->email=$request->email;
+        $maestro->password=$request->password;
+
 
         $maestro->save();
         $maestros = Maestro::all();
@@ -58,6 +60,7 @@ class MaestrosController extends Controller
     public function show($id)
     {
         $maestro=Maestro::findOrFail($id);
+        
 
         return view('maestros.show', compact('maestro'));
     }
@@ -71,8 +74,12 @@ class MaestrosController extends Controller
     public function edit($id)
     {
         $maestro=Maestro::findOrFail($id);
+        
+        foreach($maestro->clases as $clase){
+            $prueba = $clase->codigo;
+        }
 
-        return view('maestros.edit', compact('maestro'));
+        return view('maestros.edit', compact(['maestro', 'prueba']));
     }
 
     /**
@@ -104,5 +111,16 @@ class MaestrosController extends Controller
         $maestro->delete();
 
         return redirect('/maestros');
+    }
+
+    public function clases($id){
+
+        $maestro=Maestro::findOrFail($id);
+        
+        foreach($maestro->clases as $clase){
+            $prueba = $clase->codigo;
+        }
+
+        return view('maestros.clases', compact(['maestro', 'prueba']));
     }
 }

@@ -6,5 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Maestro extends Model
 {
-    protected $fillable = ['nombre', 'email'];
+    protected $fillable = ['name', 'email', 'password'];
+
+    public function clases(){
+
+        return $this->belongsToMany('App\Clase');
+    }
+
+
 }

@@ -15,7 +15,8 @@ class CreateAsistenciasTable extends Migration
     {
         Schema::create('asistencias', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('falta');
+            $table->string('falta')->nullable();
+            $table->string('asistencia')->nullable();
             $table->timestamps();
         });
     }

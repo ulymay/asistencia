@@ -16,7 +16,7 @@
         <tr>
             <td>Nombre: </td>
             <td>
-                <input type="text" name="nombre" id="">
+                <input type="text" name="name" id="">
 
                 {{csrf_field()}}
             </td>
@@ -26,6 +26,13 @@
             <td>Email: </td>
             <td>
             <input type="text" name="email" id="">
+            </td>
+        </tr>
+
+        <tr>
+            <td>Password: </td>
+            <td>
+            <input type="password" name="password" id="">
             </td>
         </tr>
 

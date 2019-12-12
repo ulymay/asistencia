@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 
+use App\Maestro;
+
+use App\Clase;
+
 
 class HomeController extends Controller
 {
@@ -29,7 +33,9 @@ class HomeController extends Controller
         $request->user()->authorizeRoles(['alumno','maestro']);
         
         if(Auth::user()->hasRole('maestro')){
-            return view('maestro');
+            $maestros = Maestro::all();
+            $clas = Clase::all();
+            return view('maestro', compact(['maestros', 'clas']));
         }else{
             return view('home');
         }
@@ -38,5 +44,14 @@ class HomeController extends Controller
 
 
         // return view('home', compact('user'));
+        
+        
+        
+
     }
+
+
+
+    
+
 }

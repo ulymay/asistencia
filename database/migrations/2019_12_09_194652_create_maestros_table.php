@@ -15,11 +15,13 @@ class CreateMaestrosTable extends Migration
     {
         Schema::create('maestros', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre');
-            $table->string('email');
-            $table->integer('clase_id');
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
             $table->timestamps();
         });
+
     }
 
     /**

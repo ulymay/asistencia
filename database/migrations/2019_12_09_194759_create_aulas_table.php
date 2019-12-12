@@ -16,7 +16,6 @@ class CreateAulasTable extends Migration
         Schema::create('aulas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('numero');
-            $table->integer('clase_id');
             $table->timestamps();
         });
     }

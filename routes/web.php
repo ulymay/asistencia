@@ -28,3 +28,16 @@ Route::resource('materias', 'MateriasController');
 Route::resource('alumnos', 'AlumnosController');
 
 Route::resource('maestros', 'MaestrosController');
+
+Route::get('/maestros/{id}/clases', function() {
+    return view('maestros.clases');
+
+});
+
+// Route::get('/maestros/{id}/show', function($id){
+//     $maestro = App\Maestro::find($id);
+
+//     foreach($maestro->clases as $clase){
+//         return $clase->codigo;
+//     }
+// });

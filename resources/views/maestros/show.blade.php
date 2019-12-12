@@ -10,25 +10,24 @@
                 <div class="card-body">
 
                 @if(Auth::user()->hasRole('maestro'))
-                        <table border='1' width=100%>
+
+                <table border='1' width=100%>
                             <tr>
                                 <td>Nombre</td>
                                 <td>Email</td>
                                 <td>Clase</td>
                             </tr>
-                            @foreach($maestros as $maestro)
-                            
                             <tr>
-                                <td><a href="{{route('', $maestro->id)}}">{{$maestro->name}}</a></td>
+                                <td>{{$maestro->name}}</a></td>
                                 <td>{{$maestro->email}}</td>
+                                <td></td>
                                 
                                 <td></td>
                             </tr>
-                            @endforeach
                             <br>
                         </table>
-                        <a class="btn btn-dark" href="{{route('maestros.create')}}" role="button">Agregar Maestro</a>
-                        
+    
+
                 @else
                         <div>Acceso como alumno</div>
                 @endif
