@@ -34,6 +34,19 @@ Route::get('/maestros/{id}/clases', function() {
 
 });
 
+Route::get('/asistencias/{id}', function($id) {
+
+    $maestro=App\Maestro::findOrFail($id);
+
+    $asistencias = App\Asistencia::all();
+        
+
+    return view('asistencias.show', compact(['maestro', 'asistencias']));
+
+});
+
+Route::resource('asistencias', 'AsistenciasController');
+
 // Route::get('/maestros/{id}/show', function($id){
 //     $maestro = App\Maestro::find($id);
 

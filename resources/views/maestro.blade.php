@@ -30,29 +30,32 @@
                             @foreach($maestros as $maestro)
                             @foreach($maestro->clases as $clase)
                             <tr>
-                                <td>{{$maestro->name}}</td>
+                                <td><a href="{{route('asistencias.show', $maestro->id)}}">{{$maestro->name}}</a></td>
                                 <td>{{$maestro->email}}</td>
                                 <td>{{$clase->codigo}}</td>
                                 <td>{{$clase->hora}}</td>
                                 <td>{{$clase->materia}}</td>
                                 <td>{{$clase->aula}}</td>
                                 <td>{{$date}}</td>
-                                
                                 @if($date <= $clase->hmaxmaestro && $date >= $clase->hora)
                                 <td>Puedes Registrarte</td>
                                 <!-- <td><a class="btn btn-dark" href="" role="button">Registrar</a></td> -->
-                                <td><button class="btn btn-dark" type="button" onclick="{{ App\Asistencia::create(['maestro'=>$maestro->name, 'asistio'=>'1', 'clase'=>$clase->materia, 'hora_asist'=>$date])}}; this.disabled=true">Button</button></td>
+                                <td><button class="btn btn-dark" type="button" onclick="{{ App\Asistencia::create(['maestro'=>$maestro->name, 'asistio'=>'1', 'clase'=>$clase->materia, 'hora_asist'=>$date])}}; this.disabled=true">Registrar</button></td>
                                 @else
                                 <td>No puedes</td>
                                 <td><a class="btn btn-dark" href="" role="button">No Ahora</a></td>
                                 @endif
-                                
+
                                 
                             </tr>
+                            
                             @endforeach
                             @endforeach
                             <br>
                         </table>
+                        <span></span>
+                                <span></span>
+                                <div><a class="btn btn-dark" href="{{route('asistencias.index')}}">Asistencias</a></div>
                     @else
                         <div>Acceso como alumno</div>
                     @endif

@@ -17,5 +17,6 @@ class Maestro extends Model
 
         return $this->belongsToMany('App\Asistencia');
     }
+    
 
 }
